@@ -1,6 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# browser-template
+# demo-client
 
 A template for starting front-end projects. Webpack for `require` system, build
 pipeline, and development server. Boostrap and Handlebars.js included. No
@@ -12,11 +12,11 @@ front-end frameworks included.
     - **Do Not Fork And Clone**
     - Click the "Clone or Download" button and select "Download Zip".
 1. Move to the `wdi/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/browser-template-master.zip`.
-1. Rename the template directory from `browser-template-master` to
+    `unzip /Users/<user-name>/Downloads/demo-client-master.zip`.
+1. Rename the template directory from `demo-client-master` to
     `<project-name>-client`.
 1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
+1. Replace all instances of `ga-wdi-boston.demo-client` with the name of
     your project.
     - You can search for all instances of text in Atom by pressing
     `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
@@ -65,7 +65,7 @@ to send to an API.
 
 ### Deployment
 
-To deploy a browser-template based SPA, run `grunt deploy`.
+To deploy a demo-client based SPA, run `grunt deploy`.
 
 ## Adding Images
 
