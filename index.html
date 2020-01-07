@@ -1,98 +1,128 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Bucket List</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Bucket List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Bucket List</h1>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <nav class="float-right">
-            <div class="feedback" id="message"></div>
-            <section class="before-auth">
-              <form id="sign-up">
-                <input type="email" name="credentials[email]" placeholder="email">
-                <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
-                <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" autocomplete="on">
-                <button class="btn btn-primary">Sign up</button>
-              </form>
+<body>
+  <h1>Bucket List</h1>
+  <div class="bg">
+    <div class="mountain-one">
+      <div class="mountain-top">
+        <div class="mountain-peak1"></div>
+        <div class="mountain-peak2"></div>
+        <div class="mountain-peak3"></div>
+      </div>
+    </div>
+    <div class="mountain-two">
+      <div class="mountain-top">
+        <div class="mountain-peak1"></div>
+        <div class="mountain-peak2"></div>
+        <div class="mountain-peak3"></div>
+      </div>
+    </div>
+    <div class="mountain-three">
+      <div class="mountain-top">
+        <div class="mountain-peak1"></div>
+        <div class="mountain-peak2"></div>
+        <div class="mountain-peak3"></div>
+      </div>
+    </div>
+  </div>
 
-              <form id="sign-in">
-                <input type="email" name="credentials[email]" placeholder="email">
-                <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
-                <button class="btn btn-primary">Sign in</button>
-              </form>
-              </section>
+  <div class="feedback" id="message"></div>
+  <section class="before-auth">
+    <div class="credentials">
+      <form id="sign-up">
+        <h2>
+          Sign Up
+        </h2>
+        <input type="email" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
+        <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" autocomplete="on">
+        <button class="btn btn-primary">Sign up</button>
+      </form>
+      <form id="sign-in">
+        <h2>
+          Sign In
+        </h2>
+        <input type="email" name="credentials[email]" placeholder="email">
+        <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
+        <button class="btn btn-primary">Sign in</button>
+      </form>
+    </div>
+  </section>
 
-              <section class="after-auth float-right">
-                <form>
-                  <button id="sign-out" class="btn btn-danger">Sign Out</button>
-                </form>
-              </section>
+  <section class="after-auth">
+    <form>
+      <button id="sign-out" class="btn btn-danger">Sign Out</button>
+    </form>
+  </section>
 
-              <section class="after-auth float-right">
-                <form id="change-password">
-                  <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
-                  <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
-                  <button class="btn btn-primary">Change password</button>
-                </form>
-              </section>
+  <section class="after-auth">
+    <form id="change-password">
+      <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
+      <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
+      <button class="btn btn-primary">Change password</button>
+    </form>
+  </section>
 
-              <div class="col-6 col-md-6">
+  <div class="col-6 col-md-6">
 
-                      <section class="after-auth">
-                        <!-- class .text-center -->
-                        <form id="create">
-                          <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
-                          <input type="text" name="title" placeholder="e.g. Your goal here">
-                          <input type="text" name="description" placeholder="e.g. visit 3 countries by year end">
-                          <input type="text" name="status" placeholder="e.g. in progress">
-                          <button class="btn btn-primary">Submit</button>
-                        </form>
-                      </section>
+    <section class="after-auth">
+      <!-- class .text-center -->
+      <form id="create">
+        <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+        <input type="text" name="title" placeholder="e.g. Your goal here">
+        <input type="text" name="description" placeholder="e.g. visit 3 countries by year end">
+        <input type="text" name="status" placeholder="e.g. in progress">
+        <button class="btn btn-primary">Submit</button>
+      </form>
+    </section>
 
-                      <div class="feedback" id="goalMessage"></div>
-                      <div class="content"></div>
-                      <section class="after-auth">
-                        <h2>Show all my goals!</h2>
-                        <form id="index">
-                          <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
-                          <button class="btn btn-primary">Show</button>
-                        </form>
-                      </section>
+    <div class="feedback" id="goalMessage"></div>
+    <div class="content"></div>
+    <section class="after-auth">
+      <h2>Show all my goals!</h2>
+      <form id="index">
+        <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+        <button class="btn btn-primary">Show</button>
+      </form>
+    </section>
 
-                      <div class="feedback" id="goalMessage"></div>
-                      <section class="after-auth">
-                        <h2>Update your goal!</h2>
-                        <form id="change-goal">
-                          <input type="text" name="goal[id]" placeholder="goal ID">
-                          <input type="text" name="title" placeholder="e.g. Your goal here">
-                          <input type="text" name="description" placeholder="e.g. visit 3 countries by year end">
-                          <input type="text" name="status" placeholder="e.g. in progress">
-                          <button class="btn btn-primary">Change</button>
-                        </form>
-                      </section>
+    <div class="feedback" id="goalMessage"></div>
+    <section class="after-auth">
+      <h2>Update your goal!</h2>
+      <form id="change-goal">
+        <input type="text" name="goal[id]" placeholder="goal ID">
+        <input type="text" name="goal[title]" placeholder="e.g. Your goal here">
+        <input type="text" name="description[title]" placeholder="e.g. visit 3 countries by year end">
+        <input type="text" name="status" placeholder="e.g. in progress">
+        <button class="btn btn-primary">Change</button>
+      </form>
+    </section>
 
-                      <div class="feedback" id="goalMessage"></div>
-                      <section class="after-auth">
-                        <h2>Delete a goal</h2>
-                        <form id="delete-goal">
-                          <input type="number" name="goal[id]" placeholder="goal ID">
-                          <button class="btn btn-danger">Delete</button>
-                        </form>
-                      </section>
-                      </div>
-
-</nav>
+    <div class="feedback" id="goalMessage"></div>
+    <section class="after-auth">
+      <h2>Delete a goal</h2>
+      <form id="delete-goal">
+        <input type="number" name="goal[id]" placeholder="goal ID">
+        <button class="btn btn-danger">Delete</button>
+      </form>
+    </section>
+  </div>
 
 
 
-    </body>
+</body>
+
 </html>

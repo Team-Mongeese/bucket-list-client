@@ -1,1 +1,98 @@
 @import '~bootstrap/scss/bootstrap';
+
+.after-auth {
+  display: none;
+}
+
+.bg{
+	  overflow:hidden;
+		background:#b4ddf0;
+		position: absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+    z-index: -2
+}
+
+h1, h2 {
+  font-family: 'Ibarra Real Nova', serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+// #message {
+//   position: absolute;
+//   color: red;
+// }
+.mountain-one, .mountain-two, .mountain-three {
+    position: absolute;
+    bottom: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 180px solid #00FA9A;
+    z-index: -1;
+}
+.mountain-two {
+    left: 80px;
+    bottom: -20px;
+    opacity: .3;
+    z-index: -2;
+}
+.mountain-three {
+    left: -60px;
+    bottom:-10px;
+    opacity: .5;
+    z-index: -2;
+}
+.mountain-top {
+    position: absolute;
+    right: -65px;
+    border-left: 65px solid transparent;
+    border-right: 65px solid transparent;
+    border-bottom: 77px solid #ceeaf6;
+    z-index: 0;
+}
+.mountain-peak1, .mountain-peak2, .mountain-peak3 {
+    position: absolute;
+    top: 70px;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #ceeaf6;
+}
+.mountain-peak1 { left: -55px; }
+.mountain-peak2 { left: -25px; }
+.mountain-peak3 { left: 5px; }
+
+
+.success {
+  border-radius: 25px;
+  background: #90eebf;
+  color: white;
+  font-family: 'Ibarra Real Nova', serif;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  right: 50%;
+  z-index: 2;
+}
+
+.failure {
+  border-radius: 25px;
+  background: #ee9090;
+  color: white;
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 2em;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  right: 50%;
+  z-index: 2;
+}
+
+// .credentials {
+//   // left: 50%;
+//   top: 50%;
+//   right: 50%;
+//   align-self: center;
+// }

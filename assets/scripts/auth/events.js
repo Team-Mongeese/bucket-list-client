@@ -7,10 +7,8 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('it works')
   const form = event.target
   const formData = getFormFields(form)
-
   api.signUp(formData)
     .then(ui.onSignupSuccess)
     .catch(ui.onSignupFailure)
@@ -55,9 +53,5 @@ const addHandlers = event => {
 }
 
 module.exports = {
-  onSignUp,
-  addHandlers,
-  onSignIn,
-  onChangePassword,
-  onSignOut
+  addHandlers
 }
