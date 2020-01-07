@@ -11,7 +11,6 @@ const authEvents = require('./auth/events')
 // const appointmentEvents = require('./appointment/events')
 $(() => {
   authEvents.addHandlers()
-  // test
   // carEvents.addHandlers()
   // appointmentEvents.addHandlers()
 })
