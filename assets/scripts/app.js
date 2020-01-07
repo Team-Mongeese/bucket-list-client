@@ -7,10 +7,10 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
-// const carEvents = require('./car/events')
+const goalEvents = require('./goal/events')
 // const appointmentEvents = require('./appointment/events')
 $(() => {
   authEvents.addHandlers()
-  // carEvents.addHandlers()
+  goalEvents.addHandlers()
   // appointmentEvents.addHandlers()
 })
