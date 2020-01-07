@@ -4,7 +4,7 @@ const store = require('../store')
 const config = require('../config')
 
 const create = formData => {
-  // console.log(formData)
+  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/goals',
     method: 'POST',
@@ -16,7 +16,8 @@ const create = formData => {
 }
 
 const index = formData => {
-  // console.log(store.user)
+  console.log(formData)
+  console.log(store.goals)
   return $.ajax({
     url: config.apiUrl + '/goals',
     method: 'GET',
@@ -29,11 +30,13 @@ const index = formData => {
 }
 
 const update = formData => {
-  // console.log(formData)
+  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/goals' + '/' + formData.goal.id,
     method: 'PATCH',
-    headers: {Authorization: `Token token=${store.user.token}`},
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
     data: formData
   })
 }
@@ -42,7 +45,9 @@ const destroy = formData => {
   return $.ajax({
     url: config.apiUrl + '/goals' + '/' + formData.goal.id,
     method: 'DELETE',
-    headers: {Authorization: `Token token=${store.user.token}`}
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    }
   })
 }
 module.exports = {
