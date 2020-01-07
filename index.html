@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Bucket List</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,44 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Bucket List</h1>
+
+      <nav class="float-right">
+            <div class="feedback" id="message"></div>
+            <section class="before-auth">
+              <form id="sign-up">
+                <input type="email" name="credentials[email]" placeholder="email">
+                <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
+                <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" autocomplete="on">
+                <button class="btn btn-primary">Sign up</button>
+              </form>
+
+              <form id="sign-in">
+                <input type="email" name="credentials[email]" placeholder="email">
+                <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
+                <button class="btn btn-primary">Sign in</button>
+              </form>
+              </section>
+
+              <section class="after-auth float-right">
+                <form>
+                  <button id="sign-out" class="btn btn-danger">Sign Out</button>
+                </form>
+              </section>
+
+              <section class="after-auth float-right">
+                <form id="change-password">
+                  <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
+                  <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
+                  <button class="btn btn-primary">Change password</button>
+                </form>
+              </section>
+
+
+
+
+
+
+
     </body>
 </html>

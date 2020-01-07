@@ -2,8 +2,9 @@
 
 let apiUrl
 const apiUrls = {
-  production: '<replace-with-heroku-url>',
-  development: 'http://localhost:4741'
+  production: 'https://powerful-meadow-13173.herokuapp.com',
+  // change back to localhost:4741 once we clone our server repo down locally
+  development: 'https://tic-tac-toe-wdi.herokuapp.com'
 }
 
 if (window.location.hostname === 'localhost') {
