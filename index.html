@@ -45,9 +45,52 @@
                 </form>
               </section>
 
+              <div class="col-6 col-md-6">
 
+                      <section class="after-auth">
+                        <!-- class .text-center -->
+                        <form id="create">
+                          <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+                          <input type="text" name="title" placeholder="e.g. Your goal here">
+                          <input type="text" name="description" placeholder="e.g. visit 3 countries by year end">
+                          <input type="text" name="status" placeholder="e.g. in progress">
+                          <button class="btn btn-primary">Submit</button>
+                        </form>
+                      </section>
 
+                      <div class="feedback" id="goalMessage"></div>
+                      <div class="content"></div>
+                      <section class="after-auth">
+                        <h2>Show all my goals!</h2>
+                        <form id="index">
+                          <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
+                          <button class="btn btn-primary">Show</button>
+                        </form>
+                      </section>
 
+                      <div class="feedback" id="goalMessage"></div>
+                      <section class="after-auth">
+                        <h2>Update your goal!</h2>
+                        <form id="change-goal">
+                          <input type="text" name="goal[id]" placeholder="goal ID">
+                          <input type="text" name="title" placeholder="e.g. Your goal here">
+                          <input type="text" name="description" placeholder="e.g. visit 3 countries by year end">
+                          <input type="text" name="status" placeholder="e.g. in progress">
+                          <button class="btn btn-primary">Change</button>
+                        </form>
+                      </section>
+
+                      <div class="feedback" id="goalMessage"></div>
+                      <section class="after-auth">
+                        <h2>Delete a goal</h2>
+                        <form id="delete-goal">
+                          <input type="number" name="goal[id]" placeholder="goal ID">
+                          <button class="btn btn-danger">Delete</button>
+                        </form>
+                      </section>
+                      </div>
+
+</nav>
 
 
 
