@@ -31,7 +31,7 @@ const onCreateFailure = (response) => {
 
 const onIndexSuccess = (response) => {
   store.goals = response.goals
-  // console.log(response)
+  console.log(response)
   $('.content').show()
   const showGoalHtml = showGoalTemplate({ goals: response.goals })
   $('.content').html(showGoalHtml)
