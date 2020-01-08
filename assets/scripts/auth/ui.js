@@ -34,7 +34,7 @@ const onSignupSuccess = () => {
 //   onFailure('Rut roh... somgthing went wrong! try again')
 // }
 
-const onSignUpFailure = () => {
+const onSignupFailure = () => {
   onFailure('Not created')
 }
 
@@ -74,7 +74,7 @@ const onSignoutFailure = () => {
 
 module.exports = {
   onSignupSuccess,
-  onSignUpFailure,
+  onSignupFailure,
   onSigninSuccess,
   onSigninFailure,
   onChangePasswordSuccess,
