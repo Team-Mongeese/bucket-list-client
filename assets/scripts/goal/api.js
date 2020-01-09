@@ -4,7 +4,6 @@ const store = require('../store')
 const config = require('../config')
 
 const create = formData => {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/goals',
     method: 'POST',
@@ -40,7 +39,6 @@ const index = () => {
 }
 
 const update = formData => {
-  console.log(formData)
   return $.ajax({
     url: config.apiUrl + '/goals' + '/' + formData.goal.id,
     method: 'PATCH',

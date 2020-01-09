@@ -46,6 +46,7 @@ const onDeleteGoal = (event) => {
   const goalId = event.target.dataset.id
   api.deleteGoal(goalId)
     .then(() => onIndex(event))
+    .then(ui.onDestroySuccess)
     .catch(ui.failure)
 }
 
@@ -55,6 +56,7 @@ const addHandlers = event => {
   $('#index').on('click', onIndex)
   $('#change-goal').on('submit', onUpdate)
   $('.contain').on('click', '.delete-goal', onDeleteGoal)
+  $('#my_selector').checkboxField()
   // $('#delete-goal').on('submit', onDelete)
 }
 module.exports = {
