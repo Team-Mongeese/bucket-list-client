@@ -1,0 +1,53 @@
+{{#each goals as |goal|}}
+  {{log book}}
+  <div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <section data-id="{{goal.id}}">
+          <h6>Title:</h6>
+          <h3>
+            {{limit goal.title 15}}
+          </h2>
+          <h6>ID:</h6>
+          <p>
+            {{#if goal._id}}
+              {{goal._id}}
+            {{else}}
+              No ID provided.
+            {{/if}}
+          </p>
+          <h6>Description:</h6>
+          <p>
+            {{#if goal.description}}
+              {{goal.description}}
+            {{else}}
+              No description provided.
+            {{/if}}
+          </p>
+          <h6>Status:</h6>
+          <p>
+            {{#if goal.status}}
+              {{goal.status}}
+            {{else}}
+              No status provided.
+            {{/if}}
+          </p>
+          <button type="click" class="btn btn-danger delete-goal" data-id="{{goal._id}}">Delete</button>
+        </section>
+      </div>
+      <div class="carousel-item">
+      </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Back</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+  </div>
+
+{{/each}}
