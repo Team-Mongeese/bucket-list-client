@@ -1,6 +1,6 @@
 {{#each goals as |goal|}}
   {{log book}}
-  <div class="container">
+  <div class="container {{goal.status}}">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -25,15 +25,16 @@
               No description provided.
             {{/if}}
           </p>
-          <h6>Status:</h6>
+          <h6>Completed?:</h6>
           <p>
             {{#if goal.status}}
               {{goal.status}}
             {{else}}
-              No status provided.
+              Not completed.
             {{/if}}
           </p>
           <button type="click" class="btn btn-danger delete-goal" data-id="{{goal._id}}">Delete</button>
+          <button type="click" class="btn btn-primary completed-goal" data-id="{{goal._id}}">Complete</button>
         </section>
       </div>
       <div class="carousel-item">
