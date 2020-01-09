@@ -1,9 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
+  padding-top: 60px;
   align-content: center;
   text-align: center;
   background-color: #b4ddf0;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .after-auth {
@@ -23,6 +26,7 @@ body {
 
 .container {
   width: 400px;
+  min-height: 400px;
   border-radius: 20px;
   margin: auto;
   padding: 10px;
@@ -30,7 +34,17 @@ body {
   align-content: center;
   align-self: center;
   padding: 25px;
-  background: #ffffff;
+  background: #ceeaf6;
+}
+
+h5 {
+  color: #ceeaf6;
+}
+
+.carousel-control-next-icon{
+  align-content: center;
+  text-align: center;
+  display: block;
 }
 
 .Yes {
@@ -40,6 +54,7 @@ body {
   background-size: 250px;
 background-position: center;
 }
+
 
 h1,
 h2 {
@@ -129,10 +144,11 @@ h2 {
 }
 
 .image {
+  display: block;
   opacity: 0.65;
   width: 100%;
   height: auto;
-  animation-duration: 30s;
+  animation-duration: 20s;
   animation-name: slidein;
   animation-iteration-count: infinite;
   filter: drop-shadow(15px 5px 4px black);
@@ -141,12 +157,10 @@ h2 {
 
 @keyframes slidein {
   from {
-    margin-left: 60%;
-    width: 100%;
+  transform: translateX(-60%);
   }
 
   to {
-    margin-left: -100%;
-    width: 100%;
+  transform: translateX(60%);
   }
 }
