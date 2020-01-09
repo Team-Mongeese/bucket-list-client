@@ -48,6 +48,17 @@ const update = formData => {
     data: formData
   })
 }
+
+const updateStatus = id => {
+  return $.ajax({
+    url: config.apiUrl + '/goals' + '/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    data: {goal: {status: 'Yes'}}
+  })
+}
 // const destroy = formData => {
 //   console.log(formData)
 //   return $.ajax({
@@ -74,5 +85,6 @@ module.exports = {
   index,
   // show
   update,
-  deleteGoal
+  deleteGoal,
+  updateStatus
 }

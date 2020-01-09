@@ -25,11 +25,16 @@ body {
   width: 400px;
   border-radius: 20px;
   margin: auto;
+  padding: 10px;
   align-items: center;
   align-content: center;
   align-self: center;
   padding: 25px;
-  background: #ffffff;
+  background: #ff9eb5;
+}
+
+.Yes {
+  background: #caff97;
 }
 
 h1,
@@ -132,7 +137,7 @@ h2 {
 
 @keyframes slidein {
   from {
-    margin-left: 40%;
+    margin-left: 60%;
     width: 100%;
   }
 

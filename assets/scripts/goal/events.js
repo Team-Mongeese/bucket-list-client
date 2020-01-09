@@ -9,6 +9,7 @@ const onCreate = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
+  formData.goal.status = 'No'
   api.create(formData)
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
@@ -33,6 +34,7 @@ const onUpdate = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
+  console.log(formData)
   api.update(formData)
     .then(ui.onUpdateSuccess)
     .then(() => api.index())
@@ -60,13 +62,36 @@ const onDeleteGoal = (event) => {
     .catch(ui.failure)
 }
 
+const onCompletedGoal = (event) => {
+  event.preventDefault()
+  const goalID = event.target.dataset.id
+  api.updateStatus(goalID)
+    .then(ui.onUpdateSuccess)
+    .then(() => api.index())
+    .then()
+    .then(ui.onIndexSuccessDisplay)
+    .catch(ui.onUpdateFailure)
+}
+
+// const checkboxClicked = event => {
+//   $(document).ready(function() {
+//     $('input[type="checkbox"]').click(function() {
+//       if ($(this).is(':checked')) {
+//         alert('Checkbox is checked.');
+//       } else if ($(this).is(':not(:checked)')) {
+//         alert('Checkbox is unchecked.');
+//       }
+//     })
+//   });
+// }
 // list event listeners and event handlers below:
+
 const addHandlers = event => {
   $('#create').on('submit', onCreate)
   $('#index').on('click', onIndex)
   $('#change-goal').on('submit', onUpdate)
   $('.contain').on('click', '.delete-goal', onDeleteGoal)
-  $('#my_selector').checkboxField()
+  $('.contain').on('click', '.completed-goal', onCompletedGoal)
   // $('#delete-goal').on('submit', onDelete)
 }
 module.exports = {
