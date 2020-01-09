@@ -11,8 +11,13 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYgNZbS1sheCBytx49tZH97J7ggsVlXh4&libraries=places&callback=initMap" async defer></script>
 </head>
 
 <body>
+  <form id="search">
+    <input id="location" class="form-control" type="text" name="location[location]" placeholder="location">
+    <button type="submit" class="btn btn-primary">search</button>
+  </form>
   <div id="map"></div>
 </html>

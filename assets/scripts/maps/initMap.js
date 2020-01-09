@@ -24,18 +24,18 @@ const findLocation = (location) => {
 }
 
 window.initMap = function() {
-  
+
 }
-// service.findPlaceFromQuery(request, (results, status) => {
-//   const gaLocation = results[0]
-//   map.setCenter(results[0].geometry.location);
-//   const gaMarker = new google.maps.Marker({ map, position: results[0].geometry.location })
-//   const infoWindow = new google.maps.InfoWindow()
-//   google.maps.event.addListener(gaMarker, 'click', () => {
-//     infoWindow.setContent(gaLocation.name)
-//     infoWindow.open(map, gaMarker)
-//   })
-// })
+service.findPlaceFromQuery(request, (results, status) => {
+  const gaLocation = results[0]
+  map.setCenter(results[0].geometry.location);
+  const gaMarker = new google.maps.Marker({ map, position: results[0].geometry.location })
+  const infoWindow = new google.maps.InfoWindow()
+  google.maps.event.addListener(gaMarker, 'click', () => {
+    infoWindow.setContent(gaLocation.name)
+    infoWindow.open(map, gaMarker)
+  })
+})
 module.exports = {
   findLocation
 }

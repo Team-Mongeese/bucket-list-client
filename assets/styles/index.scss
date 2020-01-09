@@ -1,4 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
+#map {
+  width: 100%;
+  height: 100vh;
+}
 
 .after-auth {
   display: none;
