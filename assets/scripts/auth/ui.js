@@ -28,7 +28,6 @@ const onFailure = message => {
 
 const onSignupSuccess = () => {
   onSuccess('You successfully sign up! Now, sign in')
-  console.log('check')
 }
 // const onSignupFailure = () => {
 //   onFailure('Rut roh... somgthing went wrong! try again')
