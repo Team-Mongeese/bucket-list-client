@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Bucket List</title>
+  <title>SUMMIT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -15,7 +15,7 @@
 
 <body>
   <div id="message" class="notice fixed-bottom"></div>
-  <h1>THE BUCKET LIST</h1>
+  <h1>SUMMIT</h1>
   <div class="image responsive">
     <img src="https://i.imgur.com/zhfvQbL.png" alt="cloud" style="width:200px;"></div>
 
@@ -90,24 +90,25 @@
       <!-- modal test ends here -->
       <form id="sign-up">
         <h2>
-          Sign Up
+          SIGN UP
         </h2>
         <input type="email" name="credentials[email]" placeholder="email">
         <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
         <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation" autocomplete="on">
-        <button class="btn btn-primary">Sign up</button>
+        <button class="btn btn-primary">SIGN UP</button>
       </form>
       <form id="sign-in">
         <h2>
-          Sign In
+          SIGN IN
         </h2>
         <input type="email" name="credentials[email]" placeholder="email">
         <input type="password" name="credentials[password]" placeholder="password" autocomplete="on">
-        <button class="btn btn-primary">Sign in</button>
+        <button class="btn btn-primary">SIGN IN</button>
       </form>
     </div>
   </section>
   <section class="after-auth">
+    <h2>CHANGE PASSWORD</h2>
     <form id="change-password">
       <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
       <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
@@ -122,23 +123,27 @@
         <button class="btn btn-sm btn-outline-secondary" type="button" id="sign-out">Sign Out</button>
       </form>
     </nav>
-    <h2>Create your Goals!</h2>
+    <h2>CREATE GOALS</h2>
     <form id="create">
       <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
       <input type="text" name="goal[title]" placeholder="Your goal here">
       <input type="text" name="goal[description]" placeholder="e.g. Visit 3 countries by year end">
-      <input type="text" name="goal[status]" placeholder="Completed, yes or no?">
       <!-- <input type="text" name="status" placeholder="e.g. in progress"> -->
-      <button class="btn btn-primary">Submit</button>
+      <button class="btn btn-primary">SUBMIT</button>
     </form>
-    <h2>Update your goal!</h2>
+    <h2>UPDATE GOALS</h2>
     <form id="change-goal">
       <input type="text" name="goal[id]" placeholder="goal ID">
       <input type="text" name="goal[title]" placeholder="e.g. Your goal here">
       <input type="text" name="goal[description]" placeholder="e.g. visit 3 countries by year end">
-      <input type="text" name="goal[status]" placeholder="Completed, yes or no?">
+      <fieldset>
+        <select name="goal[status]" class="selectpicker">
+          <option value = "Yes">YES</option>
+          <option value = "No">NO</option>
+        </select>
+  </fieldset>
       <!-- <input type="text" name="status" placeholder="e.g. in progress"> -->
-      <button class="btn btn-primary">Change</button>
+      <button class="btn btn-primary">UPDATE</button>
     </form>
     <!-- <h2>Delete a goal</h2> -->
     <!-- <form id="delete-goal">
