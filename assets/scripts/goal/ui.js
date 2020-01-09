@@ -72,7 +72,7 @@ const onUpdateFailure = (response) => {
 }
 
 const onDestroySuccess = (response) => {
-  onSuccess('Your just destroyed one of your goals! Here is your new list!')
+  onSuccess('Your just destroyed one of your goals! Here is your new list')
 }
 
 const onUpdatedIndexSuccess = (response) => {
