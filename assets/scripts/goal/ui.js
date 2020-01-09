@@ -38,9 +38,11 @@ const onCreateFailure = (response) => {
 }
 
 const onIndexSuccess = (response) => {
+  onSuccess('Here are your goals')
+}
+const onIndexSuccessDisplay = (response) => {
   store.goals = response.goals
   const showGoalsHtml = showGoalTemplate({ goals: response.goals })
-  onSuccess('Here are your goals')
   $('.goal-content').html(showGoalsHtml)
 }
 
@@ -62,15 +64,19 @@ const onIndexFailure = () => {
 const onUpdateSuccess = (response) => {
   // console.log(response)
   // store.goal = response.goal
-  onSuccess('Your updated one of your goal!')
+  onSuccess('Your updated one of your goals! Here is your list.')
   // $('.content').hide()
 }
 const onUpdateFailure = (response) => {
-  onFailure('Rut roh... somgthing went wrong! try again')
+  onFailure('Something went wrong! try again')
 }
 
 const onDestroySuccess = (response) => {
-  onSuccess('Your just destroyed one of your goals!')
+  onSuccess('Your just destroyed one of your goals! Here is your new list!')
+}
+
+const onUpdatedIndexSuccess = (response) => {
+  onSuccess('Your just updated your list of goals!')
 }
 
 // const onDestroyFailure = (response) => {
@@ -84,6 +90,7 @@ module.exports = {
   onIndexFailure,
   onUpdateSuccess,
   onUpdateFailure,
-  onDestroySuccess
-  // onDestroyFailure
+  onDestroySuccess,
+  onUpdatedIndexSuccess,
+  onIndexSuccessDisplay
 }
