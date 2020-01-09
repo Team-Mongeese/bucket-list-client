@@ -28,7 +28,6 @@ const onFailure = message => {
 const onCreateSuccess = (response) => {
   store.goal = response.goal
   onSuccess('You successfully created a goal!')
-  // console.log(response)
   $('.container').show()
   $('p').remove()
   $('.box').addClass('alt-color')
@@ -70,10 +69,10 @@ const onUpdateFailure = (response) => {
   onFailure('Rut roh... somgthing went wrong! try again')
 }
 
-// const onDestroySuccess = (response) => {
-//   onSuccess('Your just destroyed one of your goal!')
-//   $('.content').hide()
-// }
+const onDestroySuccess = (response) => {
+  onSuccess('Your just destroyed one of your goals!')
+}
+
 // const onDestroyFailure = (response) => {
 //   onFailure('Rut roh... somgthing went wrong! try again')
 // }
@@ -84,7 +83,7 @@ module.exports = {
   onIndexSuccess,
   onIndexFailure,
   onUpdateSuccess,
-  onUpdateFailure
-  // onDestroySuccess,
+  onUpdateFailure,
+  onDestroySuccess
   // onDestroyFailure
 }
