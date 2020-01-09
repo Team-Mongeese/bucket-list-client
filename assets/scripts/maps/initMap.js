@@ -23,6 +23,9 @@ const findLocation = (location) => {
   })
 }
 
+window.initMap = function() {
+  
+}
 // service.findPlaceFromQuery(request, (results, status) => {
 //   const gaLocation = results[0]
 //   map.setCenter(results[0].geometry.location);
