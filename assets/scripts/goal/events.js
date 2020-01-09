@@ -17,9 +17,17 @@ const onCreate = event => {
 const onIndex = event => {
   event.preventDefault()
   api.index()
+    .then(ui.onIndexSuccessDisplay)
     .then(ui.onIndexSuccess)
     .catch(ui.onIndexFailure)
 }
+
+// const onUpdatedIndex = event => {
+//   event.preventDefault()
+//   api.index()
+//     .then(ui.onUpdateSuccess)
+//     .catch(ui.onUpdateFailure)
+// }
 
 const onUpdate = event => {
   event.preventDefault()
@@ -27,7 +35,8 @@ const onUpdate = event => {
   const formData = getFormFields(form)
   api.update(formData)
     .then(ui.onUpdateSuccess)
-    .then(() => onIndex(event))
+    .then(() => api.index())
+    .then(ui.onIndexSuccessDisplay)
     .catch(ui.onUpdateFailure)
 }
 
@@ -45,8 +54,9 @@ const onDeleteGoal = (event) => {
   event.preventDefault()
   const goalId = event.target.dataset.id
   api.deleteGoal(goalId)
-    .then(() => onIndex(event))
     .then(ui.onDestroySuccess)
+    .then(() => api.index())
+    .then(ui.onIndexSuccessDisplay)
     .catch(ui.failure)
 }
 

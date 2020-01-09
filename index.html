@@ -136,7 +136,13 @@
       <input type="text" name="goal[id]" placeholder="goal ID">
       <input type="text" name="goal[title]" placeholder="e.g. Your goal here">
       <input type="text" name="goal[description]" placeholder="e.g. visit 3 countries by year end">
-      <input type="text" name="goal[status]" placeholder="Completed, yes or no?">
+      <div id="checkbox-template">
+        <div style="display:inline-block">
+          <p>Status:Completed?</p>
+          <input type="checkbox" id="checkbox_{{id}}" />
+          <label for="checkbox_{{id}}"><p>Yes</p></label>
+        </div>
+      </div>
       <!-- <input type="text" name="status" placeholder="e.g. in progress"> -->
       <button class="btn btn-primary">Change</button>
     </form>
