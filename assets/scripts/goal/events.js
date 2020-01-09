@@ -11,6 +11,7 @@ const onCreate = event => {
   const formData = getFormFields(form)
   formData.goal.status = 'No'
   api.create(formData)
+    .then(() => api.index())
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
 }

@@ -28,9 +28,9 @@ const onFailure = message => {
 const onCreateSuccess = (response) => {
   store.goal = response.goal
   onSuccess('You successfully created a goal!')
-  $('.container').show()
-  $('p').remove()
-  $('.box').addClass('alt-color')
+  // $('.container').show()
+  // $('p').remove()
+  // $('.box').addClass('alt-color')
 }
 
 const onCreateFailure = (response) => {
