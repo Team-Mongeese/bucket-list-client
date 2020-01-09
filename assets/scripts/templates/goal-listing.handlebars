@@ -3,7 +3,6 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       {{#each goals as |goal|}}
-        {{log book}}
       <div class="carousel-item {{#if @first}}active{{/if}}">
         <section data-id="{{goal.id}}" class="{{goal.status}}">
           <h6>Title:</h6>

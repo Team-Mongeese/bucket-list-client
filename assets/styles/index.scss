@@ -35,7 +35,10 @@ body {
 
 .Yes {
  background-size: cover;
+ background-repeat: no-repeat;
   background-image: url("https://i.imgur.com/FHabz3Q.png");
+  background-size: 250px;
+background-position: center;
 }
 
 h1,
