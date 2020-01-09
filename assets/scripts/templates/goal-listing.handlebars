@@ -1,10 +1,11 @@
-{{#each goals as |goal|}}
-  {{log book}}
-  <div class="container {{goal.status}}">
+
+  <div class="container">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <section data-id="{{goal.id}}">
+      {{#each goals as |goal|}}
+        {{log book}}
+      <div class="carousel-item {{#if @first}}active{{/if}}">
+        <section data-id="{{goal.id}}" class="{{goal.status}}">
           <h6>Title:</h6>
           <h3>
             {{limit goal.title 15}}
@@ -37,8 +38,7 @@
           <button type="click" class="btn btn-primary completed-goal" data-id="{{goal._id}}">Complete</button>
         </section>
       </div>
-      <div class="carousel-item">
-      </div>
+      {{/each}}
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Back</span>
@@ -50,5 +50,3 @@
   </div>
   </div>
   </div>
-
-{{/each}}

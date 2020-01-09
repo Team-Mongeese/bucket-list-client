@@ -65,30 +65,65 @@
     </div>
   </section>
   <section class="after-auth">
-    <h2>CHANGE PASSWORD</h2>
+    <!-- <h2>CHANGE PASSWORD</h2>
     <form id="change-password">
       <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
       <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
       <button class="btn btn-primary">Change password</button>
-    </form>
-
+    </form> -->
+<!-- NAV BAR STARTS HERE -->
     <nav class="navbar fixed-top navbar-light bg-light">
+      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#createModal">
+        Create
+      </button>
+      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#updateModal">
+        Update
+      </button>
       <form class="form-inline">
         <button class="btn btn-sm btn-outline-secondary" type="button" id="index">Show Goals</button>
       </form>
+      <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#changePasswordModal">
+        Change Password
+      </button>
       <form class="form-inline">
         <button class="btn btn-sm btn-outline-secondary" type="button" id="sign-out">Sign Out</button>
       </form>
     </nav>
-    <h2>CREATE GOALS</h2>
-    <form id="create">
-      <!-- <input type="text" name="example[text]" placeholder="new text here"> -->
-      <input type="text" name="goal[title]" placeholder="Your goal here">
-      <input type="text" name="goal[description]" placeholder="e.g. Visit 3 countries by year end">
-      <!-- <input type="text" name="goal[status]" placeholder="Completed, yes or no?"> -->
-      <!-- <input type="text" name="status" placeholder="e.g. in progress"> -->
-      <button class="btn btn-primary">SUBMIT</button>
-    </form>
+    <!-- NAV BAR ENDS HERE -->
+    <!-- MODAL STARTS HERE -->
+    <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="createModalLabel">ADD A GOAL</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2>CREATE GOALS</h2>
+        <form id="create">
+          <input type="text" name="goal[title]" placeholder="Your goal here">
+          <input type="text" name="goal[description]" placeholder="e.g. Visit 3 countries by year end">
+          <button class="btn btn-primary">SUBMIT</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="updateModalLabel">UPDATE A GOAL</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
     <h2>UPDATE GOALS</h2>
     <form id="change-goal">
       <input type="text" name="goal[id]" placeholder="goal ID">
@@ -103,11 +138,63 @@
       <!-- <input type="text" name="status" placeholder="e.g. in progress"> -->
       <button class="btn btn-primary">UPDATE</button>
     </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
+</div>
+</div>
+</div>
+<div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="changePasswordModalLabel">CHANGE PASSWORD</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h2>CHANGE PASSWORD</h2>
+    <form id="change-password">
+      <input type="password" name="passwords[old]" placeholder="old password" autocomplete="on">
+      <input type="password" name="passwords[new]" placeholder="new password" autocomplete="on">
+      <button class="btn btn-primary">Change password</button>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  </div>
+</div>
+</div>
+</div>
+    <!-- Modal ends here -->
+    <!-- <h2>CREATE GOALS</h2>
+    <form id="create">
+      <input type="text" name="goal[title]" placeholder="Your goal here">
+      <input type="text" name="goal[description]" placeholder="e.g. Visit 3 countries by year end">
+      <button class="btn btn-primary">SUBMIT</button>
+    </form> -->
+    <!-- <h2>UPDATE GOALS</h2>
+    <form id="change-goal">
+      <input type="text" name="goal[id]" placeholder="goal ID">
+      <input type="text" name="goal[title]" placeholder="e.g. Your goal here">
+      <input type="text" name="goal[description]" placeholder="e.g. visit 3 countries by year end">
+      <fieldset>
+             <select name="goal[status]" class="selectpicker">
+               <option value = "Yes">YES</option>
+               <option value = "No">NO</option>
+             </select>
+       </fieldset> -->
+      <!-- <input type="text" name="status" placeholder="e.g. in progress"> -->
+      <!-- <button class="btn btn-primary">UPDATE</button>
+    </form> -->
     <!-- <h2>Delete a goal</h2> -->
     <!-- <form id="delete-goal">
       <input type="text" name="goal[id]" placeholder="goal ID">
       <button class="btn btn-danger">Delete</button>
     </form> -->
+    <h1>WHAT PEAKS WILL YOU CLIMB?</h1>
     <div class="goal-content contain"></div>
   </section>
 </body>
