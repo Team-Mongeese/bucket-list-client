@@ -11,8 +11,9 @@ const onCreate = event => {
   const formData = getFormFields(form)
   formData.goal.status = 'No'
   api.create(formData)
-    .then(() => api.index())
     .then(ui.onCreateSuccess)
+    .then(() => api.index())
+    .then(ui.onIndexSuccessDisplay)
     .catch(ui.onCreateFailure)
 }
 
@@ -35,7 +36,7 @@ const onUpdate = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
+  // console.log(formData)
   api.update(formData)
     .then(ui.onUpdateSuccess)
     .then(() => api.index())

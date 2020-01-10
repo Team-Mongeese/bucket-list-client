@@ -27,7 +27,7 @@ const onFailure = message => {
 // }
 
 const onSignupSuccess = () => {
-  onSuccess('You successfully sign up! Now, sign in')
+  onSuccess('You successfully signed up! Now, sign in')
 }
 // const onSignupFailure = () => {
 //   onFailure('Rut roh... somgthing went wrong! try again')
@@ -39,7 +39,7 @@ const onSignupFailure = () => {
 
 const onSigninSuccess = responseData => {
   store.user = responseData.user
-  onSuccess('You successfully sign in!')
+  onSuccess('You successfully signed in!')
   $('.after-auth').show()
   // $('.before-auth').hide()
   $('.before-auth').hide()
@@ -51,7 +51,7 @@ const onSigninFailure = () => {
 
 const onChangePasswordSuccess = responseData => {
   // store.user = responseData.user
-  onSuccess('You successfully changed password!')
+  onSuccess('You successfully changed your password!')
 }
 const onChangePasswordFailure = () => {
   onFailure('Change Password did not work')

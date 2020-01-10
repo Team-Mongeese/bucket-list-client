@@ -7,7 +7,9 @@ Bucket List is a cloud-based web app for adventurers of all stripes to be able t
 Using Mongoose, the user is able create an account with email and password, that only they can see. From there, they can create “Goals” on their bucket list and add it to their MongoDB database. These “Goals” can be updated with new “titles” or “descriptions” if the user provides id of the goal (available of the “bucket list” index). They are also able to update the status to Complete, yes, if they have crossed it off their list. If the user no longer has passion for one of their goals, they can also delete the goal completely. While accessing their account, they can change their passwords and then ultimately log out so they can go pursue their dreams!
 ## Links
   [**backend repo**](https://github.com/Team-Mongeese/bucket-list-api)
+
   [**deployed client**](https://team-mongeese.github.io/bucket-list-client/)
+  
   [**deployed api**](https://powerful-meadow-13173.herokuapp.com/)
 ## Tech
 Bucket list Frontend uses open source projects to work:

@@ -35,12 +35,7 @@ const onChangePassword = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-
   api.signOut()
-    .then((res) => {
-      console.log('server sent back sign out response', res)
-    })
-    // res.user // throw an error: no user property on undefined
     .then(ui.onSignoutSuccess)
     .catch(ui.onSignoutFailure)
 }

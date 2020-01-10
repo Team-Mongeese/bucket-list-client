@@ -64,7 +64,7 @@ const onIndexFailure = () => {
 const onUpdateSuccess = (response) => {
   // console.log(response)
   // store.goal = response.goal
-  onSuccess('Your updated one of your goals! Here is your list.')
+  onSuccess('You updated one of your goals! Here is your list.')
   // $('.content').hide()
 }
 const onUpdateFailure = (response) => {
@@ -72,11 +72,11 @@ const onUpdateFailure = (response) => {
 }
 
 const onDestroySuccess = (response) => {
-  onSuccess('Your just destroyed one of your goals! Here is your new list')
+  onSuccess('You just destroyed one of your goals! Here is your new list')
 }
 
 const onUpdatedIndexSuccess = (response) => {
-  onSuccess('Your just updated your list of goals!')
+  onSuccess('You just updated your list of goals!')
 }
 
 // const onDestroyFailure = (response) => {
