@@ -58,17 +58,17 @@ $ grunt nag
 ### Wireframes
 ![main screen](https://i.imgur.com/Id1EIW5.jpg)
 **More screens:**
-[login](https://i.imgur.com/OG1GGq8.jpg)
-[create goal](https://i.imgur.com/vt2L854.jpg)
-[view goals](https://i.imgur.com/zT2mRt4.jpg)
-[edit goals](https://i.imgur.com/E36e9hb.jpg)
+[login](https://i.imgur.com/OG1GGq8.jpg),
+[create goal](https://i.imgur.com/vt2L854.jpg),
+[view goals](https://i.imgur.com/zT2mRt4.jpg),
+[edit goals](https://i.imgur.com/E36e9hb.jpg),
 [change password](https://i.imgur.com/c29EXiJ.jpg)
 ## Document your planning, process and problem-solving strategy
 ### SCRUM Schedule
 Everyday consisted of three 15 minute stand-ups where we touched base about how far along we came in a Sprint (Sprints were approximately 3 hours long) at 9:05A, 11:45A, 3:30P. During the process, we ended up adding an unofficial meeting at the end of day 4:40P, as well.
 ### Sprint 1:
 To start off this project, the whole team spent some time researching the requirements and guide lines the day before. We assigned group roles: Product Lead, Frontend Lead, Backend Lead, and Quality Control Lead.
-Janina created a project board in Github with issues for all of our requirements to deploy final product. First day of the project, Justin created a stategy to minimize merge conflicts by pair programing back end and front end. Janina and Justin started out working on frontend to create and test authorization and make sure it was working properly. During this time, Bibek and Ben worked on back end.
+Janina created a project board in Github with issues for all of our requirements to deploy final product. First day of the project, Justin created a strategy to minimize merge conflicts by pair programing back end and front end. Janina and Justin started out working on frontend to create and test authorization and make sure it was working properly. During this time, Bibek and Ben worked on back end.
 ### Sprint 2:
 During this sprint Janina and Justin pair programmed to now test the recourse which was created. Bibek worked on styling up what we already had on the front end. He added the messages for invalid forms and a moving CSS background. During this time, Ben was working on Backend Readme.
 ### Sprint 3:
@@ -87,6 +87,7 @@ The steps were the following:
 License
 ----
 MIT
+
 [Gulp]: <http://gulpjs.com>
 [Handlebars]: <https://handlebarsjs.com/>
 [Atom]: <https://atom.io/>
@@ -94,6 +95,6 @@ MIT
 [Bootstrap]: <https://getbootstrap.com/>
 [Grunt]: <https://gruntjs.com/>
 [WebPack]: <https://webpack.js.org/>
-[jQuery]: <https://jquery.com/>
+[jQuery/AJAX]: <https://jquery.com/>
 [EsLint]: <https://eslint.org/>
 [Dillinger]: <https://dillinger.io/>
